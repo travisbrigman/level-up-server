@@ -1,8 +1,11 @@
+"""Event model module"""
 from django.db import models
-from django.contrib.auth.models import User
 
 
 class Event(models.Model):
-
-    game_id = models.DecimalField(max_digits=3, decimal_places=0)
-    datetime = models.DateTimeField(auto_now=True, editable=True)
+    """Event database model"""
+    gamer = models.ForeignKey("Gamer", on_delete=models.CASCADE)
+    day = models.DateField(auto_now=False, auto_now_add=False)
+    time = models.TimeField(auto_now=False, auto_now_add=False)
+    location = models.CharField(max_length=75)
+    game = models.ForeignKey("Game", on_delete=models.CASCADE)
