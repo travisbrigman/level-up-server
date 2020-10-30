@@ -3,7 +3,7 @@
     "model": "levelupapi.game",
     "pk": 1,
     "fields": {
-      "gamer_id": 1,
+      "gamer": 1,
       "number_of_players": 4,
       "skill_level": 5,
       "title": "monopoly",
@@ -14,7 +14,7 @@
     "model": "levelupapi.game",
     "pk": 2,
     "fields": {
-      "gamer_id": 1,
+      "gamer": 1,
       "number_of_players": 4,
       "skill_level": 1,
       "title": "candyland",
