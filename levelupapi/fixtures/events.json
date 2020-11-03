@@ -1,13 +1,32 @@
 [
-{
-    "model": "levelupapi.event",
-    "pk": 1,
-    "fields" : {
-        "gamer": 1,
-        "game": 1,
-        "location": "Nashville",
-        "day": "2020-10-30",
-        "time": "15:44"
+    {
+        "model": "levelupapi.event",
+        "pk": 1,
+        "fields": {
+            "gamer": 1,
+            "game": 1,
+            "date": "2021-10-04",
+            "time": "12:00"
+        }
+    },
+    {
+        "model": "levelupapi.event",
+        "pk": 2,
+        "fields": {
+            "gamer": 1,
+            "game": 2,
+            "date": "2021-08-14",
+            "time": "19:30"
+        }
+    },
+    {
+        "model": "levelupapi.event",
+        "pk": 3,
+        "fields": {
+            "gamer": 1,
+            "game": 3,
+            "date": "2021-04-20",
+            "time": "8:00"
+        }
     }
-}
 ]
