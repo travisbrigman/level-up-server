@@ -33,6 +33,7 @@ class Events(ViewSet):
         try:
             event.save()
             serializer = EventSerializer(event, context={'request': request})
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
         except ValidationError as ex:
             return Response({"reason": ex.message}, status=status.HTTP_400_BAD_REQUEST)
 
@@ -45,7 +46,7 @@ class Events(ViewSet):
         try:
             event = Event.objects.get(pk=pk)
             serializer = EventSerializer(event, context={'request': request})
-            return Response(serializer.data)
+            return Response(serializer.data, status=status.HTTP_200_OK)
         except Exception as ex:
             return HttpResponseServerError(ex)
 
@@ -214,5 +215,5 @@ class EventSerializer(serializers.HyperlinkedModelSerializer):
             lookup_field='id'
         )
         fields = ('id', 'url', 'game', 'gamer',
-                   'date', 'time', 'joined', 'gamer')
+                   'date', 'time', 'joined')
 
